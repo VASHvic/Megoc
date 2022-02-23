@@ -22,6 +22,7 @@
   font-size: 18px;
   font-family: Oswald-light;
   color: #fff;
+  overflow-x: hidden;
   --primary-color: #f2d669;
   --secondary-color: #464545;
   --image-width: 80%;
@@ -296,7 +297,6 @@ button:hover:after {
     font-size: 21px;
   }
   body {
-    overflow-x: hidden;
     height: fit-content;
   }
   aside#mobile-menu {
