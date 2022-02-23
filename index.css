@@ -22,6 +22,7 @@
   font-size: 18px;
   font-family: Oswald-light;
   color: #fff;
+  width: 100vw;
   overflow-x: hidden;
   --primary-color: #f2d669;
   --secondary-color: #464545;
