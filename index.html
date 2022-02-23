@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/megoc-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Megòc Mockup</title>
+</head>
+
+<body>
+    <aside id="mobile-menu">
+        <button class="btn"> <a href="#proxims-concerts">PRÒXIMS CONCERTS</a> </button>
+        <button class="btn"> <a href="#qui-som">QUÍ SOM</a> </button>
+        <button class="btn"> <a href="#cantar">T'AGRADA CANTAR?</a> </button>
+        <button onclick="anarGaleria()" class="btn">LA NOSTRA GALERIA</button>
+    </aside>
+    <header>
+        <a href="index.html">
+            <div id="container-logo">
+                <picture id="container-logo">
+                    <source media="(min-width: 960px)" srcset="./imgs/logo-gran-removebg2.png">
+                    <img src="./imgs/logo-gran-removebg.png" alt="Logo de Megoc">
+                </picture>
+            </div>
+        </a>
+        <div id="navbar">
+            <button onclick="tagradaCantar()" class="btn">T'AGRADA CANTAR?</button>
+            <button onclick="mostraConcerts()" class="btn">PRÓXIMS CONCERTS</button>
+            <button onclick="anarGaleria()" class="btn">LA NOSTRA GALERIA</button>
+        </div>
+        <div id="container-menu" onclick="burguerMenu()" style="cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <article id="pasio" class="animate__animated animate__slideInRight">
+            <h1 class="titol">LA NOSTRA PASSIÓ</h1>
+            <img alt="imatge-principal">
+        </article>
+        <article id="proxims-concerts" class="animate__animated">
+            <h1 class="titol">PRÓXIMS CONCERTS</h1>
+            <table>
+                <tr>
+                    <td>10/02/22</td>
+                    <td>Concert en el centre polivalent</td>
+                    <td>Oliva</td>
+                </tr>
+                <tr>
+                    <td>15/02/22</td>
+                    <td>Palau Ducal</td>
+                    <td>Gandia</td>
+                </tr>
+                <tr>
+                    <td>23/03/22</td>
+                    <td>Plaça del Prado</td>
+                    <td>Gandia</td>
+                </tr>
+            </table>
+        </article>
+        <article id="qui-som" class="animate__animated">
+            <h1 class="titol">QUI SOM?</h1>
+            <section id="container-qui-som">
+                <p id="descripcio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit suscipit ipsa non
+                    iure
+                    unde
+                    voluptatibus itaque quam sunt quas sapiente accusantium perspiciatis, corporis nihil voluptatum
+                    soluta
+                    sint veniam expedita quia!
+                </p>
+                <img src="./imgs/qui-som.jpg" alt="foto de grupo">
+            </section>
+        </article>
+        <article id="cantar">
+            <h1 class="titol">VOLS CANTAR AMB NOSALTRES?</h1>
+            <form action="">
+                <div class="form-control">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-control">
+                    <label for="telefon">Telèfon</label>
+                    <input type="phone" name="telefon" id="telefon">
+                </div>
+                <div class="form-control">
+                    <label for="comentaris">Comentaris</label>
+                    <input name="comentaris" id="comentaris">
+                </div>
+                <div id="form-control">
+                    <button class="btn2">Enviar</button>
+                    <button class="btn2">Borrar</button>
+                </div>
+            </form>
+        </article>
+    </main>
+    <footer class="animate__animated animate__bounce">
+        <section id="footer-info">
+            <img src="./imgs/logo-gran-removebg.png" alt="logo-megoc">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quibusdam tenetur provident, nostrum
+                cumque magnam. Pariatur veniam eos repellat eaque temporibus aliquid veritatis libero optio!</p>
+        </section>
+        <ul id="xarxes-container">
+            <li><a href="https://www.youtube.com/channel/UCBFOmQbnbP34euwO8fSE7Ag" class="fa-brands fa-youtube"></a>
+            <li><a href="https://www.facebook.com/ModernEspaiGospelCor/" class="fa-brands fa-facebook"></a></li>
+            </li>
+            <li><a href="https://www.instagram.com/modernespaigospelcor/" class="fa-brands fa-instagram"></a></li>
+        </ul>
+        <ul id="idiomes">
+            <li><img src="./imgs/valencia.png" alt=""></li>
+            <li><img src="./imgs/españa.png" alt=""></li>
+            <li><img src="./imgs/america.png" alt=""></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
