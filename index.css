@@ -7,6 +7,16 @@
   font-family: Oswald-light;
   src: url('./Font/Oswald/Oswald-Light.ttf');
 }
+@keyframes aparecer {
+  0% {
+    bottom: -200px;
+    position: fixed;
+  }
+  100% {
+    position: fixed;
+    bottom: 0;
+  }
+}
 *,
 *::after,
 *::before {
@@ -223,6 +233,37 @@ footer #xarxes-container > li {
 footer #xarxes-container i {
   cursor: pointer;
 }
+#cookies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  background-color: slategray;
+  left: 0;
+  right: 0;
+  animation: aparecer 2s forwards;
+  color: #fff;
+  height: fit-content;
+}
+#cookies button {
+  all: unset;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#cookies #cookie-rechazar {
+  background-color: red;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#cookies #cookie-aceptar {
+  background-color: limegreen;
+  border-radius: 10px;
+
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
 .yellow-shadow1 {
   box-shadow: inset 0px 0px 0px var(--primary-color),
     inset -5px -5px 5px var(--primary-color);
@@ -274,7 +315,7 @@ button:hover {
   color: #000;
 }
 
-button:after {
+button:after:not(.cookie) {
   content: '';
   background: var(--primary-color);
   position: absolute;

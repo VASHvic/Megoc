@@ -5,9 +5,9 @@ const quiSom = document.getElementById('qui-som');
 const proximsConcerts = document.getElementById('proxims-concerts');
 const main = document.querySelector('main');
 const media = window.matchMedia('(max-width: 960px)');
+const mobileMenu = document.getElementById('mobile-menu');
 const footer = document.querySelector('footer');
 const cantar = document.getElementById('cantar');
-const mobileMenu = document.getElementById('mobile-menu');
 mobileMenu.style.display = 'none';
 
 const estat = {
@@ -16,9 +16,9 @@ const estat = {
   pasio: true,
   concerts: false,
   cantar: false,
-  mobileMenu: false,
   concertsGaleria: true,
 };
+let menu = false;
 
 media.addEventListener('change', () => {
   refresh();
@@ -101,14 +101,16 @@ function refresh() {
   }
 }
 function burguerMenu() {
-  estat.modal = true;
-  if (estat.mobileMenu === false) {
-    estat.mobileMenu = true;
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (window.location.href.endsWith('index.html')) {
+    estat.modal = true;
+  }
+  if (!menu) {
     mobileMenu.style.display = 'flex';
   } else {
-    estat.mobileMenu = false;
     mobileMenu.style.display = 'none';
   }
+  menu = !menu;
 }
 function anarGaleria() {
   estat.quiSom = false;
@@ -144,4 +146,9 @@ function carousel() {
     pasioImg.src = images[0];
   }
 }
+
+function desaparecer() {
+  document.getElementById('cookies').remove();
+}
+
 carousel();
